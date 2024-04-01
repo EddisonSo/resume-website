@@ -57,7 +57,6 @@ jobs:
       - name: Build and Push web-service
         uses: docker/build-push-action@v5
         with:
-          context: web-service
           platforms: linux/amd64
           push: true
           tags: eddisonso/eddison-resume:${{needs.setup.outputs.TIMESTAMP}}, eddisonso/eddison-resume:latest
