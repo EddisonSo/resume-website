@@ -1,136 +1,149 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 70%;
-    }
+    <head>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 70%;
+            }
 
-    td, th {
-        text-align: left;
-        padding: 8px;
-        font-weight: normal;
-        vertical-align: top;
-    }
+            td, th {
+                text-align: left;
+                padding: 8px;
+                font-weight: normal;
+                vertical-align: top;
+            }
 
-    .header {
-        font-size: 16px;
-        margin: 0;
-        margin-top: 50px;
-        margin-bottom: 10px;
-        padding: 0;
-        text-align: center;
-    }
+            .header {
+                font-size: 16px;
+                margin: 0;
+                margin-top: 50px;
+                margin-bottom: 10px;
+                padding: 0;
+                text-align: center;
+            }
 
-    * {
-        font-family: Verdana, sans-serif;
-    }
-</style>
-</head>
-<body>
-
-    <div class="header">
+            * {
+                font-family: Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
         <div class="header">
-            <b>Eddison So</b><br>
-            <a href="https://eddisonso2.com">https://eddisonso2.com</a><br>
-            <a href="https://eddisonso.com">https://eddisonso.com</a><br>
-            <a href="mailto:eddisonso@gmail.com">eddisonso@gmail.com</a>
+            <div class="header">
+                <b>Eddison So</b><br>
+                <a href="https://eddisonso.com">https://eddisonso.com</a><br>
+                <a href="https://eddisonso2.com">https://eddisonso2.com</a><br>
+                <a href="mailto:eddisonso@gmail.com">eddisonso@gmail.com</a>
+            </div>
         </div>
-    </div>
-    <table>
-        <tr>
-            <th style="width:20%">
-                <b>Summary</b>
-            </th>
-
-            <th style="width:80%">
-                Computer science student that specializes in enterprise systems and backend engineering. I am currently seeking opportunities to further my knowledge in these fields by to improve my knowledge in engineering practices that increase reliability and performance of software.
-            </th>
-        </tr>
-        <tr>
-            <td><b>Education</b></td>
-            <td>
-                <i><b>Stevens Institute of Technology</b></i><br>
-                Bachelors of Science in Computer Science, 2024 Fall<br>
-                Minor in Mathematics
-                <br><br>
-            </td>
-        </tr>
-        <tr>
-            <td><b>Experience</b></td>
-            <td>
-                <i><b>Stevens Institute of Technology</b></i><br>
-                Integrated Spatial Modeling and Remote Sensing Technologies Laboratory<br>
-                <a href="https://web.stevens.edu/ismart/">https://web.stevens.edu/ismart/</a><br>
-                Research Assistant
-                <br><br>
-                The goal of the project is to develop a scalable network of sensors that provide a novel method of tracking
-                flood in urban regions. My role in the project is to add additional sensor functionality through the use of a
-                static rain-gauge and develop the backend infrastructure to support data persistence and processing.
-                <br><br>
-                Sensor Development:<br>
-                <ul>
-                    <li> Integrated additional sensor function by implementing precipitation sensor by modifying the microcontroller configuration to allow for an additional serial device.
-                    <li> Assisted in the implementation of LoRaWAN functionality by rewriting sensor firmware for periodic polling with LoRaWAN network.
-                </ul>
-                <br>
-                Backend Development:<br>
-                <ul>
-                    <li> Designed backend infrastructure to allow for horizontal scaling across stateless services (API service and mapping webservice).
-                    <li> Utilized the Flask micro-framework for API access to the persistence of sensor data.
-                    <li> Designed database schema to persist various domain model objects such as sensors and sensordata.
-                    <li> Utilized PostgreSQL for the atomic operations during the persistence of data to support a high number of concurrent read/write operations from sensors and users.
-                    <li> Utilized nginx to loadbalance across multiple Flask instances.
-                    <li> Deployed using Docker to allow for inter-container networking and consistent deployment using Docker Compose.
-                    <li> Utilized Folium and Plotly for data visualization on the mapping webserver.
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <i><b>Stevens Institute of Technology</b></i><br>
-                Course Assistant for CS382 (Computer Architecture and Organization)
-                <br>
-                <ul>
-                    <li> Held laboratory sessions to guide students through low-level programming and computer organization.
-                    <li> Held office hours to assist students with course material.
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <i><b>Stevens Institute of Technology</b></i><br>
-                Course Assistant for CS392 (Systems Programming)
-                <br>
-                <ul>
-                    <li> Held laboratory sessions to guide students through systems programming using Linux.
-                    <li> Held office hours to assist students with course material.
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td><b>Projects</b></td>
-            <td>
-                <i><b>Reels</b></i><br>
-                HackNJIT Project<br>
-                <a href="https://github.com/team-reels/Reels">https://github.com/team-reels/Reels</a><br>
-                Backend Developer 
-                <br>
-                <ul>
-                    <li> Collaborated with team members to decide technical requirements.
-                    <li> Developed backend and database schema to support CRUD operations and data persistence.
-                    <li> Utilized Google Cloud for image storage and hosting.
-                    <li> Utilized Docker for consistent deployment.
-                </ul>
-            </td>
-        </tr>
-    </table>
-
-</body>
+        <table>
+            <tr>
+                <th style="width:20%">
+                    <b>Summary</b>
+                </th>
+                <th style="width:80%">
+                    Computer science student with interests in enterprise systems and backend engineering. I am currently seeking opportunities to further my knowledge in these fields to further my knowledge in engineering practices that increase reliability and performance of software.
+                </th>
+            </tr>
+            <tr>
+                <td><b>Education</b></td>
+                <td>
+                    <i><b>Stevens Institute of Technology</b></i><br>
+                    Masters of Science in Computer Science, 2025<br>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <i><b>Stevens Institute of Technology</b></i><br>
+                    Bachelors of Science in Computer Science, 2024<br>
+                    Minor in Mathematics
+                </td>
+            </tr>
+            <tr>
+                <td><b>Experience</b></td>
+                <td>
+                    <b>I-SMART</b><br><br>
+                    Software Engineer<br><br>
+                    A scalable network of sensors that provide a novel method of tracking flood in urban regions. My role in the project is to add additional sensor functionality through the use of a static rain-gauge and develop data persistence and processing systems.<br><br>
+                    Sensor Development:<br>
+                    <ul>
+                        <li>Implemented precipitation sensor to existing sensor design to allow water level tracking.</li>
+                        <li>Modified microcontroller configuration to allow for an additional serial device.</li>
+                        <li>Implemented LoRaWAN connectivity by rewriting sensor firmware for periodic polling with LoRaWAN network.</li>
+                    </ul><br>
+                    Backend Development:<br>
+                    <ul>
+                        <li>Developed data persistence server and mapping service to allow users to access real-time sensor data.</li>
+                        <li>Designed database schema to persist various domain model objects such as sensors and sensordata.</li>
+                        <li>Utilized nginx for reverse proxy to backend services.</li>
+                        <li>Deployed using Docker to allow for inter-container networking and consistent deployment using Docker Compose.</li>
+                        <li>Developed mapping webserver using Folium and Plotly for data visualization.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <i><b>Stevens Institute of Technology</b></i><br>
+                    Course Assistant<br>
+                    <b>Courses</b>:<br>
+                    Computer Architecture and Organization<br>
+                    Systems Development<br>
+                    Computer Organization and Programming<br>
+                    <ul>
+                        <li>Held laboratory sessions to guide students through low-level programming and computer organization.</li>
+                        <li>Held office hours to assist students with course material.</li>
+                        <li>Assisted with coursework grading.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Projects</b></td>
+                <td>
+                    <i><b>League Finder</b></i><br>
+                    Class project for League of Legends team finding using Express, Handlebars and MongoDB.<br>
+                    <a href="https://github.com/ouckah/league-finder">https://github.com/ouckah/league-finder</a><br>
+                    Fullstack Development<br>
+                    <ul>
+                        <li>Developed monolithic backend service using Express.</li>
+                        <li>Utilized MongoDB for data persistence.</li>
+                        <li>Utilized Handlebars for HTML templating and input sanitization.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <i><b>Hubba</b></i><br>
+                    Capstone project to develop social media application for gamers using React, Flask and PostgreSQL.<br>
+                    <a href="https://github.com/hubba-lubba/hubba">https://github.com/hubba-lubba/hubba</a><br>
+                    Backend Development<br>
+                    <ul>
+                        <li>Developed backend services using Flask.</li>
+                        <li>Developed GitHub Actions for CI/CD to Kubernetes cluster.</li>
+                        <li>Implemented microservices using Google Cloud's Pub/Sub for event streaming.</li>
+                        <li>Developed file service that provides signed URLs with limited scope to allow users to upload images securely.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <i><b>Reels</b></i><br>
+                    HackNJIT Project<br>
+                    <a href="https://github.com/team-reels/Reels">https://github.com/team-reels/Reels</a><br>
+                    Backend Developer<br>
+                    <ul>
+                        <li>Collaborated with team members to decide technical requirements.</li>
+                        <li>Developed backend and database schema to support CRUD operations and data persistence.</li>
+                        <li>Utilized Google Cloud for image storage and hosting.</li>
+                        <li>Utilized Docker for consistent deployment.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>
-
-
