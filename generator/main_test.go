@@ -1,6 +1,9 @@
 package main
 
 import (
+	"bytes"
+	"flag"
+	"os"
 	"strings"
 	"testing"
 )
@@ -124,5 +127,34 @@ func TestParseEmpty(t *testing.T) {
 	_, err := parseResume([]byte(""))
 	if err == nil {
 		t.Fatal("want error for empty input, got nil")
+	}
+}
+
+var update = flag.Bool("update", false, "update golden files")
+
+func TestRenderGolden(t *testing.T) {
+	data, err := os.ReadFile("testdata/sample.yaml")
+	if err != nil {
+		t.Fatal(err)
+	}
+	r, err := parseResume(data)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var buf bytes.Buffer
+	if err := render(r, &buf); err != nil {
+		t.Fatalf("render: %v", err)
+	}
+	if *update {
+		if err := os.WriteFile("testdata/golden.html", buf.Bytes(), 0o644); err != nil {
+			t.Fatal(err)
+		}
+	}
+	want, err := os.ReadFile("testdata/golden.html")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if buf.String() != string(want) {
+		t.Errorf("rendered HTML does not match testdata/golden.html; run 'go test ./generator/ -update' and review the diff")
 	}
 }

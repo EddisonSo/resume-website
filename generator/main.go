@@ -2,8 +2,10 @@ package main
 
 import (
 	"bytes"
+	"embed"
 	"errors"
 	"fmt"
+	"html/template"
 	"io"
 
 	"gopkg.in/yaml.v3"
@@ -50,6 +52,17 @@ type Project struct {
 	Link     string   `yaml:"link"`
 	Role     string   `yaml:"role"`
 	Bullets  []string `yaml:"bullets"`
+}
+
+//go:embed resume.html.tmpl
+var tmplFS embed.FS
+
+func render(r *Resume, w io.Writer) error {
+	t, err := template.ParseFS(tmplFS, "resume.html.tmpl")
+	if err != nil {
+		return err
+	}
+	return t.Execute(w, r)
 }
 
 func parseResume(data []byte) (*Resume, error) {

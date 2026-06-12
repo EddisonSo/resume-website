@@ -1,0 +1,33 @@
+header:
+  name: Jane Doe
+  email: jane@example.com
+  links:
+    - https://example.com
+summary: A short summary.
+education:
+  - school: Example University
+    degree: BS in Testing, 2024
+    notes:
+      - Minor in QA
+experience:
+  - org: Example Corp
+    title: Engineer
+    subtitle: Platform Team
+    link: https://example.com/platform
+    description: Built things.
+    groups:
+      - label: "Backend:"
+        bullets:
+          - Did backend work.
+          - Did more backend work.
+  - org: Example Corp
+    title: Intern
+    bullets:
+      - Did intern work.
+projects:
+  - name: Widget
+    subtitle: Hackathon
+    link: https://example.com/widget
+    role: Developer
+    bullets:
+      - Made a widget.

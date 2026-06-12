@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 70%;
+    }
+
+    td, th {
+        text-align: left;
+        padding: 8px;
+        font-weight: normal;
+        vertical-align: top;
+    }
+
+    .header {
+        font-size: 16px;
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        padding: 0;
+        text-align: center;
+    }
+
+    * {
+        font-family: Verdana, sans-serif;
+    }
+</style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header">
+            <b>{{.Header.Name}}</b><br>
+            {{- range .Header.Links}}
+            <a href="{{.}}">{{.}}</a><br>
+            {{- end}}
+            {{- if .Header.Email}}
+            <a href="mailto:{{.Header.Email}}">{{.Header.Email}}</a>
+            {{- end}}
+        </div>
+    </div>
+    <table>
+{{- if .Summary}}
+        <tr>
+            <th style="width:20%">
+                <b>Summary</b>
+            </th>
+            <th style="width:80%">
+                {{.Summary}}
+            </th>
+        </tr>
+{{- end}}
+{{- range $i, $e := .Education}}
+        <tr>
+            <td>{{if eq $i 0}}<b>Education</b>{{end}}</td>
+            <td>
+                <i><b>{{$e.School}}</b></i><br>
+                {{- if $e.Degree}}
+                {{$e.Degree}}<br>
+                {{- end}}
+                {{- range $e.Notes}}
+                {{.}}<br>
+                {{- end}}
+            </td>
+        </tr>
+{{- end}}
+{{- range $i, $e := .Experience}}
+        <tr>
+            <td>{{if eq $i 0}}<b>Experience</b>{{end}}</td>
+            <td>
+                <i><b>{{$e.Org}}</b></i><br>
+                {{- if $e.Subtitle}}
+                {{$e.Subtitle}}<br>
+                {{- end}}
+                {{- if $e.Link}}
+                <a href="{{$e.Link}}">{{$e.Link}}</a><br>
+                {{- end}}
+                {{- if $e.Title}}
+                {{$e.Title}}<br>
+                {{- end}}
+                {{- if $e.Description}}
+                <br>{{$e.Description}}<br>
+                {{- end}}
+                {{- range $e.Groups}}
+                <br>{{.Label}}<br>
+                <ul>
+                    {{- range .Bullets}}
+                    <li>{{.}}
+                    {{- end}}
+                </ul>
+                {{- end}}
+                {{- if $e.Bullets}}
+                <ul>
+                    {{- range $e.Bullets}}
+                    <li>{{.}}
+                    {{- end}}
+                </ul>
+                {{- end}}
+            </td>
+        </tr>
+{{- end}}
+{{- range $i, $p := .Projects}}
+        <tr>
+            <td>{{if eq $i 0}}<b>Projects</b>{{end}}</td>
+            <td>
+                <i><b>{{$p.Name}}</b></i><br>
+                {{- if $p.Subtitle}}
+                {{$p.Subtitle}}<br>
+                {{- end}}
+                {{- if $p.Link}}
+                <a href="{{$p.Link}}">{{$p.Link}}</a><br>
+                {{- end}}
+                {{- if $p.Role}}
+                {{$p.Role}}<br>
+                {{- end}}
+                {{- if $p.Bullets}}
+                <ul>
+                    {{- range $p.Bullets}}
+                    <li>{{.}}
+                    {{- end}}
+                </ul>
+                {{- end}}
+            </td>
+        </tr>
+{{- end}}
+    </table>
+
+</body>
+</html>
