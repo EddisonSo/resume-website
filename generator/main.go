@@ -4,9 +4,11 @@ import (
 	"bytes"
 	"embed"
 	"errors"
+	"flag"
 	"fmt"
 	"html/template"
 	"io"
+	"os"
 
 	"gopkg.in/yaml.v3"
 )
@@ -79,6 +81,32 @@ func parseResume(data []byte) (*Resume, error) {
 		return nil, err
 	}
 	return &r, nil
+}
+
+func main() {
+	in := flag.String("in", "resume.yaml", "input YAML file")
+	out := flag.String("out", "index.html", "output HTML file")
+	flag.Parse()
+
+	data, err := os.ReadFile(*in)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
+	r, err := parseResume(data)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "%s: %v\n", *in, err)
+		os.Exit(1)
+	}
+	var buf bytes.Buffer
+	if err := render(r, &buf); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
+	if err := os.WriteFile(*out, buf.Bytes(), 0o644); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 }
 
 func validate(r *Resume) error {
