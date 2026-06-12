@@ -34,9 +34,29 @@ jobs:
         run: |
           echo "::set-output name=TIMESTAMP::$TIMESTAMP"
 
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Vet and Test Generator
+        run: |
+          go vet ./generator/
+          go test ./generator/
+
+      - name: Generate HTML
+        run: go run ./generator -in resume.yaml -out /tmp/index.html
+
   build-push-website:
     runs-on: ubuntu-latest
-    needs: [setup]
+    needs: [setup, test]
 
     steps:
       - name: Checkout
