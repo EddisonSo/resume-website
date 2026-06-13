@@ -33,6 +33,9 @@ experience:
           - Did more backend work.
   - org: Example Corp
     title: Intern
+    notes:
+      - "Courses:"
+      - Testing 101
     bullets:
       - Did intern work.
 projects:
@@ -78,6 +81,9 @@ func TestParseValid(t *testing.T) {
 	}
 	if r.Experience[1].Bullets[0] != "Did intern work." {
 		t.Errorf("Experience[1].Bullets = %v", r.Experience[1].Bullets)
+	}
+	if len(r.Experience[1].Notes) != 2 || r.Experience[1].Notes[0] != "Courses:" {
+		t.Errorf("Experience[1].Notes = %v", r.Experience[1].Notes)
 	}
 	if r.Projects[0].Role != "Developer" {
 		t.Errorf("Projects[0].Role = %q", r.Projects[0].Role)

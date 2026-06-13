@@ -81,6 +81,9 @@
                 {{- if $e.Title}}
                 {{$e.Title}}<br>
                 {{- end}}
+                {{- range $e.Notes}}
+                {{.}}<br>
+                {{- end}}
                 {{- if $e.Description}}
                 <br>{{$e.Description}}<br>
                 {{- end}}

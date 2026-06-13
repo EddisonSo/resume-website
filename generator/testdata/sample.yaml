@@ -22,6 +22,9 @@ experience:
           - Did more backend work.
   - org: Example Corp
     title: Intern
+    notes:
+      - "Courses:"
+      - Testing 101
     bullets:
       - Did intern work.
 projects:

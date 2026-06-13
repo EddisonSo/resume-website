@@ -43,6 +43,7 @@ type Experience struct {
 	Title       string   `yaml:"title"`
 	Subtitle    string   `yaml:"subtitle"`
 	Link        string   `yaml:"link"`
+	Notes       []string `yaml:"notes"`
 	Description string   `yaml:"description"`
 	Groups      []Group  `yaml:"groups"`
 	Bullets     []string `yaml:"bullets"`
