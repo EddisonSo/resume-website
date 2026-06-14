@@ -3,79 +3,52 @@ header:
   email: eddisonso@gmail.com
   links:
     - https://eddisonso.com
-    - https://eddisonso2.com
 
-summary: >
-  Computer science student with interests in enterprise systems and backend
-  engineering. I am currently seeking opportunities to further my knowledge in
-  these fields to further my knowledge in engineering practices that increase
-  reliability and performance of software.
+summary: Software engineer focused on building reliable, scalable backend systems and cloud infrastructure.
 
 education:
   - school: Stevens Institute of Technology
-    degree: Masters of Science in Computer Science, 2025
+    degree: "Master of Science in Computer Science, GPA: 3.734 (September 2024 – May 2025)"
   - school: Stevens Institute of Technology
-    degree: Bachelors of Science in Computer Science, 2024
+    degree: "Bachelor of Science in Computer Science (September 2020 – May 2024)"
     notes:
       - Minor in Mathematics
+      - "Innovation & Entrepreneurship Summer Scholar, Dean's List, Edwin A. Stevens Scholarship"
 
 experience:
-  - org: I-SMART
+  - org: Macquarie Group
+    subtitle: Commodities and Global Markets · December 2025 – Present
     title: Software Engineer
-    description: >
-      A scalable network of sensors that provide a novel method of tracking
-      flood in urban regions. My role in the project is to add additional
-      sensor functionality through the use of a static rain-gauge and develop
-      data persistence and processing systems.
-    groups:
-      - label: "Sensor Development:"
-        bullets:
-          - Implemented precipitation sensor to existing sensor design to allow water level tracking.
-          - Modified microcontroller configuration to allow for an additional serial device.
-          - Implemented LoRaWAN connectivity by rewriting sensor firmware for periodic polling with LoRaWAN network.
-      - label: "Backend Development:"
-        bullets:
-          - Developed data persistence server and mapping service to allow users to access real-time sensor data.
-          - Designed database schema to persist various domain model objects such as sensors and sensordata.
-          - Utilized nginx for reverse proxy to backend services.
-          - Deployed using Docker to allow for inter-container networking and consistent deployment using Docker Compose.
-          - Developed mapping webserver using Folium and Plotly for data visualization.
-  - org: Stevens Institute of Technology
-    title: Course Assistant
-    notes:
-      - "Courses:"
-      - Computer Architecture and Organization
-      - Systems Development
-      - Computer Organization and Programming
     bullets:
-      - Held laboratory sessions to guide students through low-level programming and computer organization.
-      - Held office hours to assist students with course material.
-      - Assisted with coursework grading.
+      - Enhanced reporting platform supporting over 5000 active deals daily across multiple business groups.
+      - Architected and implemented a centralized rate capture service integrating multiple vendor feeds, reducing duplication across trading workflows and leading to production adoption.
+      - Utilized profiling tools (flame graphs) to diagnose and reduce scheduled process runtime by 93%.
+      - Fixed critical issues in the C++ pricing engine codebase.
+  - org: I-SMART
+    subtitle: May 2023 – January 2024
+    title: Software Engineer (Research Assistant)
+    description: Novel method of modeling floods in urban environments using sensor networks.
+    bullets:
+      - Designed and implemented an ingestion pipeline to reliably ingest real time telemetry (1 event every 30 seconds per sensor, 8600 events/day across 3 sensors), ensuring durable persistence for flood modeling research.
+      - Extended sensor circuit design to integrate rainfall measurement instrumentation, enabling precipitation telemetry.
+  - org: Stevens Institute of Technology
+    subtitle: September 2023 – May 2025
+    title: Teaching Assistant for Computer Architecture and Organization, Systems Programming
+    bullets:
+      - Supported a cohort of 189 students through grading, office hours, and lab sessions.
 
 projects:
-  - name: League Finder
-    subtitle: Class project for League of Legends team finding using Express, Handlebars and MongoDB.
-    link: https://github.com/ouckah/league-finder
-    role: Fullstack Development
+  - name: Edd-Cloud
+    subtitle: July 2025 – Present
+    link: https://docs.cloud.eddisonso.com
     bullets:
-      - Developed monolithic backend service using Express.
-      - Utilized MongoDB for data persistence.
-      - Utilized Handlebars for HTML templating and input sanitization.
-  - name: Hubba
-    subtitle: Capstone project to develop social media application for gamers using React, Flask and PostgreSQL.
-    link: https://github.com/hubba-lubba/hubba
-    role: Backend Development
+      - Designed and implemented an L7 load balancer enabling HTTP and SSH traffic forwarding to backend services and client containers.
+      - Utilized a GFS inspired distributed storage system to implement a multi tenant object storage service with user defined namespaces.
+      - Built real time observability tools to view server events and performance metrics of backend services.
+  - name: Go-GFS
+    subtitle: July 2025 – Present
+    link: https://github.com/EddisonSo/go-gfs
     bullets:
-      - Developed backend services using Flask.
-      - Developed GitHub Actions for CI/CD to Kubernetes cluster.
-      - Implemented microservices using Google Cloud's Pub/Sub for event streaming.
-      - Developed file service that provides signed URLs with limited scope to allow users to upload images securely.
-  - name: Reels
-    subtitle: HackNJIT Project
-    link: https://github.com/team-reels/Reels
-    role: Backend Developer
-    bullets:
-      - Collaborated with team members to decide technical requirements.
-      - Developed backend and database schema to support CRUD operations and data persistence.
-      - Utilized Google Cloud for image storage and hosting.
-      - Utilized Docker for consistent deployment.
+      - Designed and implemented a Google File System inspired distributed storage platform, focusing on replication, consistency, and fault tolerance.
+      - Utilized Go's goroutines and channels to build high throughput, non blocking I/O pipelines for parallel chunk replication and client operations.
+      - Developed metadata coordination, replica synchronization, and append semantics using gRPC for control plane and TCP streaming for the data plane.
