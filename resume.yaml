@@ -21,16 +21,17 @@ experience:
     title: Software Engineer
     bullets:
       - Enhanced reporting platform supporting over 5000 active deals daily across multiple business groups.
-      - Architected and implemented a centralized rate capture service integrating multiple vendor feeds, reducing duplication across trading workflows and leading to production adoption.
+      - Built a centralized rate capture service integrating multiple vendor feeds, reducing duplication across trading workflows and leading to production adoption.
       - Utilized profiling tools (flame graphs) to diagnose and reduce scheduled process runtime by 93%.
-      - Fixed critical issues in the C++ pricing engine codebase.
+      - Fixed various critical issues in the C++ pricing engine codebase.
   - org: I-SMART
     subtitle: May 2023 – January 2024
     title: Software Engineer (Research Assistant)
     description: Novel method of modeling floods in urban environments using sensor networks.
     bullets:
-      - Designed and implemented an ingestion pipeline to reliably ingest real time telemetry (1 event every 30 seconds per sensor, 8600 events/day across 3 sensors), ensuring durable persistence for flood modeling research.
+      - Designed and implemented an ingestion pipeline to reliably ingest real time telemetry, ensuring durable persistence for flood modeling research.
       - Extended sensor circuit design to integrate rainfall measurement instrumentation, enabling precipitation telemetry.
+      - Built sensor data visulization platform allowing researchers to view real time data.
   - org: Stevens Institute of Technology
     subtitle: September 2023 – May 2025
     title: Teaching Assistant for Computer Architecture and Organization, Systems Programming
@@ -42,9 +43,11 @@ projects:
     subtitle: July 2025 – Present
     link: https://docs.cloud.eddisonso.com
     bullets:
-      - Designed and implemented an L7 load balancer enabling HTTP and SSH traffic forwarding to backend services and client containers.
       - Utilized a GFS inspired distributed storage system to implement a multi tenant object storage service with user defined namespaces.
-      - Built real time observability tools to view server events and performance metrics of backend services.
+      - Deployed a lightweight image registry service built on top of the custom distributed filesystem.
+      - Designed and implemented an L7 load balancer enabling HTTP and SSH traffic forwarding to backend services and client containers.
+      - Built compute service allowing users to deploy containers across different instance types (AMD64/ARM)
+      - Built real time observability and alerting tools to view server events and performance metrics of backend services.
   - name: Go-GFS
     subtitle: July 2025 – Present
     link: https://github.com/EddisonSo/go-gfs
